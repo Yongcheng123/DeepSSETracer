@@ -1,0 +1,78 @@
+<html>
+
+<!--
+=== UCSF ChimeraX Copyright ===
+Copyright 2018 Regents of the University of California.
+All rights reserved.  This software provided pursuant to a
+license agreement containing restrictions on its disclosure,
+duplication and use.  For details see:
+http://www.rbvi.ucsf.edu/chimerax/docs/licensing.html
+This notice must be embedded in or attached to all copies,
+including partial copies, of the software or any revisions
+or derivations thereof.
+=== UCSF ChimeraX Copyright ===
+-->
+
+<head>
+<link rel="stylesheet" type="text/css" href="../userdocs.css" />
+<title>DeepSSETracer: Tutorial</title>
+</head><body>
+
+<a name="top"></a>
+<a href="../index.html">
+<img width="80px" src="../../DeepSSETracerLogo.png" alt="DeepSSETracer docs icon"
+	 class="clRight" title="User Guide Index"/></a>
+
+<h3><a href="https://www.frontiersin.org/articles/10.3389/fbinf.2021.710119/full">DeepSSETracer</a> Instruction:</h3>
+<p>
+<b>DeepSSETracer</b> is a tool for detecting secondary structures using the best GEM-UNET model that had been trained
+	from our <a href="https://dl.acm.org/doi/abs/10.1145/3388440.3414710">previous work</a> in Cryo-EM images. It is
+	capable of detecting helices and beta sheets in images of medium resolution
+</p>
+
+<p>
+<b>Required Input:</b><br><br>
+	1. MRC: MRC map needs to be resampled to 1.0 Angstrom voxel size before running the tool, click the browse button to select
+	the resampled MRC file.
+	<br>
+	2.Output directory: Click the browse button to select the Output path.
+</p>
+
+<p>
+	<b>Resampling MRC:</b>
+	<br><br>
+	To resample an MRC file to 1.0 Angstrom, we can use ChimeraX command line:<br>
+	1. "open mymap.mrc"<br>
+	2. "volume resample #1 spacing 1.0"<br>
+	3. "save mymap-1A.mrc model #2"<br>
+</p>
+
+<p>
+<b>Run:</b><br><br>
+	After providing the necessary input, hit the run button to start the procedure, the log file will be displayed later.
+</p>
+
+<p>
+	<b>Output:</b><br><br>
+	Output will be the predicted helix.mrc and sheet.mrc. It will be directly displayed once the
+	prediction finished. If the result is invisible, you may set a proper level in the panel in ChimeraX. It also can be
+	 found in the output directory.
+</p>
+
+
+<p>
+<b>Note:</b><br><br>
+	1. The procedure takes a few seconds with GPU, and a few seconds to a few minutes without GPU. The time usage
+	depends on the size of the image and the Computer or server. For a example, a image with size: 74*59*83 takes 81
+	seconds without GPU, and 7 seconds with one GPU.<br>
+	2. If the images is too big to run on your computer, you may try to box chopped to smaller images to run.<br>
+	3. For sample input and output, click <a href="https://cs.odu.edu/~bioinfo/DeepSSETracer/">
+	Download</a>.
+</p>
+
+<hr>
+<address>Participants in methodology and code development:
+Yongcheng Mu, Salim Sazzed, Maytha Alshammari, Dr. Jiangwen Sun and Dr. Jing He
+	- Computer Science Department of Old Dominion University
+</address>
+</body></html>

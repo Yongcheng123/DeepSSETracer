@@ -1,0 +1,57 @@
+<!--
+ChimeraX bundle names must start with "ChimeraX-"
+to avoid clashes with package names in pypi.python.org.
+When uploaded to the ChimeraX toolshed, the bundle
+will be displayed without the ChimeraX- prefix.
+-->
+
+<BundleInfo name="ChimeraX-DeepSSETracer"
+	    version="1.1" package="chimerax.deepssetracer"
+  	    minSessionVersion="1" maxSessionVersion="1">
+
+  <!-- Additional information about bundle source -->
+  <Author>ODU Bio-Informatics</Author>
+  <Email>bioinfo@cs.odu.edu</Email>
+  <URL> </URL>
+
+  <!-- Synopsis is a one-line description
+       Description is a full multi-line description -->
+  <Synopsis>This program predicts protein secondary structures using the saved model of deep learning program.</Synopsis>
+  <Description>
+    Deep learning code for implementing ChimeraX bundle.
+    Implements tool "DeepSSETracer" to log typed user input.
+  </Description>
+
+  <!-- Categories is a list where this bundle should appear -->
+  <Categories>
+    <Category name="Volume Data"/>
+  </Categories>
+
+  <!-- Dependencies on other ChimeraX/Python packages -->
+  <!-- This example uses functionality from the Tutorial_Command bundle -->
+  <Dependencies>
+    <Dependency name="ChimeraX-Core" version="~=1.1"/>
+    <Dependency name="ChimeraX-UI" version="~=1.0"/>
+    <Dependency name="importlib-metadata" version="~=4.0.1"/>
+    <Dependency name="torch" version="~=2.1.2"/>
+    <Dependency name="numpy" version="~=1.26.0"/>
+  </Dependencies>
+
+  <!-- Non-Python files that are part of package -->
+  <DataFiles>
+    <DataFile>torch_best_model.chkpt</DataFile>
+    <DataFile>docs/user/tools/tutorial.html</DataFile>
+    <DataFile>docs/DeepSSETracerLogo.png</DataFile>
+  </DataFiles>
+
+  <Classifiers>
+    <!-- Development Status should be compatible with bundle version number -->
+    <PythonClassifier>Development Status :: 3 - Alpha</PythonClassifier>
+    <PythonClassifier>License :: Freeware</PythonClassifier>
+    <!-- ChimeraX classifiers describe supplied functionality -->
+    <!-- Register a graphical interface tool -->
+    <ChimeraXClassifier>ChimeraX :: Tool :: DeepSSETracer ::
+      Volume Data :: Predict secondary structures using GEM-UNET</ChimeraXClassifier>
+  </Classifiers>
+
+</BundleInfo>
