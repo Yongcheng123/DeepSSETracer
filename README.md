@@ -39,6 +39,8 @@ DeepSSETracer uses a custom 3D U-Net to identify alpha-helices and beta-sheets d
 
 ## Usage
 
+![DeepSSETracer workflow](deepssetracer.png)
+
 ### GUI Interface
 1. Open ChimeraX and launch **Tools → Volume Data → DeepSSETracer**
 2. Select input MRC file containing your density map
