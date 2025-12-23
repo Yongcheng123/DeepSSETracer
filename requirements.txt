@@ -1,0 +1,25 @@
+# DeepSSETracer Dependencies
+
+## Core Requirements
+torch>=1.8.0
+numpy>=1.19.0
+
+## ChimeraX Integration
+# ChimeraX bundles are installed via ChimeraX itself
+# This project requires:
+# - UCSF ChimeraX >= 1.0
+# - chimerax.core
+# - chimerax.ui
+# - chimerax.map_data
+
+## Development (Optional)
+# pytest>=6.0.0
+# black>=21.0
+# flake8>=3.9.0
+
+## Notes
+# This is a ChimeraX bundle and should be installed via:
+#   chimerax --nogui --cmd "toolshed install /path/to/wheel.whl"
+# 
+# For standalone Python environment (testing/development):
+#   pip install torch numpy
